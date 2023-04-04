@@ -1,27 +1,42 @@
+
 # Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Projeto Angular com autenticação de cadastro de compra. Este projeto é uma aplicação web criada com o framework Angular, que permite aos usuários se autenticarem e realizar cadastro de compras. O objetivo deste documento é fornecer uma visão geral do projeto e suas principais funcionalidades.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Logo](https://mherman.org/assets/img/blog/angular-logo.png)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Autores
 
-## Build
+- [@jrcantador](https://www.github.com/jrcantador)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Instalação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Após clonar o repositório do projeto, abra um terminal e navegue até a pasta raiz do projeto. Em seguida, execute o seguinte comando para instalar as dependências do projeto:
 
-## Running end-to-end tests
+```bash
+  npm run deploy
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Executando o projeto
 
-## Further help
+Para executar o projeto, execute o seguinte comando:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+  ng serve
+```
+
+Isso irá iniciar o servidor de desenvolvimento e o aplicativo estará acessível em http://localhost:4200/.
+
+## Funcionalidades
+Este projeto possui as seguintes funcionalidades principais:
+
+ - Autenticação: O usuário pode criar uma conta e fazer login na aplicação.
+ - Cadastro de compras: O usuário autenticado pode cadastrar suas compras, informando o nome do produto, quantidade e preço.
+ - Listagem de compras: O usuário autenticado pode visualizar uma lista com todas as compras que ele cadastrou.
+
+## Arquitetura
+
+Este projeto foi construído seguindo a arquitetura MVC (Model-View-Controller). A camada de visualização é composta pelos componentes Angular, a camada de modelo é representada pelos serviços Angular e a camada de controle é responsável pela lógica de negócios da aplicação.
