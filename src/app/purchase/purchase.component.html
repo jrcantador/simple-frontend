@@ -1,0 +1,47 @@
+<app-menu></app-menu>
+<form (ngSubmit)="adicionarCompra()" class="p-3 border rounded">  
+    <div class="form-group row">
+        <label for="descricao" class="col-sm-3 col-form-label">Descrição:</label>
+        <div class="col-sm-9">
+            <input type="text" id="descricao" name="descricao" [(ngModel)]="purchase.description" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="produto" class="col-sm-3 col-form-label">Produto:</label>
+        <div class="col-sm-9">
+            <input type="text" id="produto" name="produto" [(ngModel)]="purchase.product" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="quantidade" class="col-sm-3 col-form-label">Quantidade:</label>
+        <div class="col-sm-9">
+            <input type="number" id="quantidade" name="quantidade" [(ngModel)]="purchase.amount" class="form-control">
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-secondary">Adicionar</button>
+    </div>
+</form>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Descrição</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let purchase of purchases">
+            <td>{{ purchase.id }}</td>
+            <td>{{ purchase.description }}</td>
+            <td>{{ purchase.product }}</td>
+            <td>{{ purchase.amount }}</td>
+            <td>                
+                <button class="btn btn-sm btn-danger" (click)="removePurchase(purchase.id)">Remover</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
